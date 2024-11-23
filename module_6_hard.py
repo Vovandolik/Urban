@@ -55,6 +55,7 @@ class Circle(Figure):
     def __init__(self, color, *sides):
         self.__sides = []
         self.__color = [*color]
+        self.filled = bool
         if len(sides) != self.sides_count:
             self.__sides.append(1)
         else:
@@ -104,6 +105,7 @@ class Triangle(Figure):
     def __init__(self, color, *sides):
         self.__sides = []
         self.__color = [*color]
+        self.filled = bool
         for i in range(self.sides_count):
             self.__sides.append(None)
         if len(sides) != self.sides_count:
